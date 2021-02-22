@@ -7,3 +7,5 @@ Baekjoon Online Judge에서 풀었던 문제에 대한 코드 모음입니다.
 
 
 My ID : [kareus](https://www.acmicpc.net/user/kareus)
+
+Environment : C++17 / Microsoft Visual Studio 2019
