@@ -319,8 +319,9 @@ struct splayTree
 	void flip(int S, int E) //flip [S, E]
 	{
 		gather(S, E);
-		root->flip = !root->flip;
-		root->push();
+		splay_node* i = root->right->left
+		i->flip = !i->flip;
+		i->push();
 	}
 };
 
