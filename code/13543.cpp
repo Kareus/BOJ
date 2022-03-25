@@ -323,6 +323,29 @@ struct splayTree
 		i->flip = !i->flip;
 		i->push();
 	}
+	
+	void shift(int S, int E, int amount) //shift [S, E]
+	{
+		gather(S, E);
+
+		if (amount >= 0)
+		{
+			amount %= (E - S + 1);
+			if (!amount) return;
+			flip(S, E);
+			flip(S, S + amount - 1);
+			flip(S + amount, E);
+		}
+		else
+		{
+			amount = -amount;
+			amount %= (E - S + 1);
+			if (!amount) return;
+			flip(S, E);
+			flip(S, E - amount);
+			flip(E - amount + 1, E);
+		}
+	}
 };
 
 int N, M;
